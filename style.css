@@ -62,3 +62,38 @@ h1 {
   from { transform: translateY(100vh) rotate(0deg); }
   to { transform: translateY(-120vh) rotate(360deg); }
 }
+.audio-player {
+  text-align: center;
+  margin-top: 30px;
+  background: rgba(255, 255, 0, 0.1);
+  border: 3px solid #f1c40f;
+  border-radius: 20px;
+  padding: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+  animation: pulse 2s infinite;
+}
+
+.audio-player p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.audio-player audio {
+  width: 250px;
+  border-radius: 15px;
+  outline: none;
+}
+
+/* Cute pulsing effect */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(241, 196, 15, 0.6); }
+  50% { box-shadow: 0 0 25px rgba(241, 196, 15, 1); }
+  100% { box-shadow: 0 0 10px rgba(241, 196, 15, 0.6); }
+}
+
+
