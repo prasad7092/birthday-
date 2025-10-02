@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #fffbe6, #fff2b2);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: #ffb703;
+  text-shadow: 0px 0px 15px rgba(255, 200, 0, 0.7);
+  margin: 20px 0;
+  animation: glow 2s infinite alternate, bounce 2s infinite ease-in-out, fadeIn 2s ease-in-out;
+}
+
+/* Glow effect */
+@keyframes glow {
+  from { text-shadow: 0px 0px 15px rgba(255, 200, 0, 0.7); }
+  to { text-shadow: 0px 0px 35px rgba(255, 200, 0, 1); }
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.countdown {
+  font-size: 2rem;
+  color: #1d3557;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.5);
+}
+
+.sunflower {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_sky_backdrop.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh) rotate(0deg); }
+  to { transform: translateY(-120vh) rotate(360deg); }
+}
